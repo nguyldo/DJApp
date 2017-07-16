@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		908F71CE1B5F0C5088ED7251 /* Pods_DJApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCF12C76B653D4C27088A2E /* Pods_DJApp.framework */; };
 		CB226C3E1F116C8E006A5209 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB226C3D1F116C8E006A5209 /* AppDelegate.swift */; };
-		CB226C401F116C8E006A5209 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB226C3F1F116C8E006A5209 /* ViewController.swift */; };
 		CB226C431F116C8E006A5209 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB226C411F116C8E006A5209 /* Main.storyboard */; };
 		CB226C451F116C8E006A5209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB226C441F116C8E006A5209 /* Assets.xcassets */; };
 		CB226C481F116C8E006A5209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB226C461F116C8E006A5209 /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 		BC19697479706519DB5D2D00 /* Pods-DJApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DJApp/Pods-DJApp.release.xcconfig"; sourceTree = "<group>"; };
 		CB226C3A1F116C8E006A5209 /* DJApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DJApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB226C3D1F116C8E006A5209 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB226C3F1F116C8E006A5209 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB226C421F116C8E006A5209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB226C441F116C8E006A5209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB226C471F116C8E006A5209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				CB226C3D1F116C8E006A5209 /* AppDelegate.swift */,
-				CB226C3F1F116C8E006A5209 /* ViewController.swift */,
 				CB226C411F116C8E006A5209 /* Main.storyboard */,
 				CB226C441F116C8E006A5209 /* Assets.xcassets */,
 				CB226C461F116C8E006A5209 /* LaunchScreen.storyboard */,
@@ -215,7 +212,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB226C401F116C8E006A5209 /* ViewController.swift in Sources */,
 				CB226C3E1F116C8E006A5209 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
