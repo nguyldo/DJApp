@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		609ED7F11F1DBCF2004FA0A4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609ED7F01F1DBCF2004FA0A4 /* MainViewController.swift */; };
 		908F71CE1B5F0C5088ED7251 /* Pods_DJApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCF12C76B653D4C27088A2E /* Pods_DJApp.framework */; };
 		CB226C3E1F116C8E006A5209 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB226C3D1F116C8E006A5209 /* AppDelegate.swift */; };
 		CB226C431F116C8E006A5209 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB226C411F116C8E006A5209 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		3042A003BB93F5C6D4EF4FF8 /* Pods-DJApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DJApp/Pods-DJApp.debug.xcconfig"; sourceTree = "<group>"; };
+		609ED7F01F1DBCF2004FA0A4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BC19697479706519DB5D2D00 /* Pods-DJApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DJApp/Pods-DJApp.release.xcconfig"; sourceTree = "<group>"; };
 		CB226C3A1F116C8E006A5209 /* DJApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DJApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB226C3D1F116C8E006A5209 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				CB226C461F116C8E006A5209 /* LaunchScreen.storyboard */,
 				CB226C491F116C8E006A5209 /* Info.plist */,
 				CBD262471F1A7C0B005B9231 /* GoogleService-Info.plist */,
+				609ED7F01F1DBCF2004FA0A4 /* MainViewController.swift */,
 			);
 			path = DJApp;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB226C3E1F116C8E006A5209 /* AppDelegate.swift in Sources */,
+				609ED7F11F1DBCF2004FA0A4 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
