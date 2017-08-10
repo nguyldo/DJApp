@@ -13,6 +13,10 @@
 		CB226C431F116C8E006A5209 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB226C411F116C8E006A5209 /* Main.storyboard */; };
 		CB226C451F116C8E006A5209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB226C441F116C8E006A5209 /* Assets.xcassets */; };
 		CB226C481F116C8E006A5209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB226C461F116C8E006A5209 /* LaunchScreen.storyboard */; };
+		CB740B6D1F1FCBA3007DD5F8 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB740B6C1F1FCBA3007DD5F8 /* SongsViewController.swift */; };
+		CB749C7D1F36564300EFC01A /* SongYoutubeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB749C7C1F36564300EFC01A /* SongYoutubeData.swift */; };
+		CB904C9A1F2284A70071A36B /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB904C991F2284A60071A36B /* SongTableViewCell.swift */; };
+		CB904C9D1F22875A0071A36B /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB904C9C1F22875A0071A36B /* Song.swift */; };
 		CBD262481F1A7C0B005B9231 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBD262471F1A7C0B005B9231 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +30,10 @@
 		CB226C441F116C8E006A5209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB226C471F116C8E006A5209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB226C491F116C8E006A5209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB740B6C1F1FCBA3007DD5F8 /* SongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
+		CB749C7C1F36564300EFC01A /* SongYoutubeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongYoutubeData.swift; sourceTree = "<group>"; };
+		CB904C991F2284A60071A36B /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		CB904C9C1F22875A0071A36B /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		CBCF12C76B653D4C27088A2E /* Pods_DJApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DJApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD262471F1A7C0B005B9231 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +88,9 @@
 		CB226C3C1F116C8E006A5209 /* DJApp */ = {
 			isa = PBXGroup;
 			children = (
+				CB22E7831F3531AD000D77FF /* View */,
+				CB904C9B1F22874A0071A36B /* Model */,
+				CB740B6B1F1FCB76007DD5F8 /* ViewController */,
 				CB226C3D1F116C8E006A5209 /* AppDelegate.swift */,
 				CB226C411F116C8E006A5209 /* Main.storyboard */,
 				CB226C441F116C8E006A5209 /* Assets.xcassets */,
@@ -89,6 +100,31 @@
 				609ED7F01F1DBCF2004FA0A4 /* MainViewController.swift */,
 			);
 			path = DJApp;
+			sourceTree = "<group>";
+		};
+		CB22E7831F3531AD000D77FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB904C991F2284A60071A36B /* SongTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CB740B6B1F1FCB76007DD5F8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CB740B6C1F1FCBA3007DD5F8 /* SongsViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		CB904C9B1F22874A0071A36B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB904C9C1F22875A0071A36B /* Song.swift */,
+				CB749C7C1F36564300EFC01A /* SongYoutubeData.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +251,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB904C9D1F22875A0071A36B /* Song.swift in Sources */,
+				CB904C9A1F2284A70071A36B /* SongTableViewCell.swift in Sources */,
 				CB226C3E1F116C8E006A5209 /* AppDelegate.swift in Sources */,
 				609ED7F11F1DBCF2004FA0A4 /* MainViewController.swift in Sources */,
 			);
