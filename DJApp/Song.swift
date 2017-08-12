@@ -26,6 +26,7 @@ class Song: Comparable {
     
     }
     
+    // why are upvotes/downvotes included in init? should be initialized to 0
     init(songId: String, upvotes: Int, downvotes: Int) {
     
         self.songId = songId

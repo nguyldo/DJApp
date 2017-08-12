@@ -16,7 +16,7 @@ class SongTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        newImageView.image = funImage
+        //newImageView.image = funImage
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

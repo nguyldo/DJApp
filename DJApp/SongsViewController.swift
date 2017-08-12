@@ -12,6 +12,11 @@ class SongsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet var tableView: UITableView!
     
+    let searchSongViewController = SearchSongViewController()
+    var searchController: UISearchController {
+        return UISearchController(searchResultsController: searchSongViewController)
+    }
+    
     // *********** EXAMPLE DATA *************** //
     private var songs = [Song(songId: "id1", upvotes: 0, downvotes: 0),
                          Song(songId: "id2", upvotes: 0, downvotes: 0),
@@ -58,8 +63,10 @@ class SongsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
 
         tableView.dataSource = self
+        tableView.tableHeaderView = searchController.searchBar
+        searchController.searchResultsUpdater = searchSongViewController
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -69,6 +76,12 @@ class SongsViewController: UIViewController, UITableViewDelegate, UITableViewDat
      - numberOfRowsInSection: return songs array count
      - cellForRowAt: populates cell with data using indexPath to identify Song from songs array
      */
+    // need override keyword?
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songs.count
     }
