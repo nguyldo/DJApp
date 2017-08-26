@@ -12,10 +12,10 @@ class SongsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet var tableView: UITableView!
     
-    let searchSongViewController = SearchSongViewController()
-    var searchController: UISearchController {
-        return UISearchController(searchResultsController: searchSongViewController)
-    }
+//    let searchSongViewController = SearchSongViewController()
+//    var searchController: UISearchController {
+//        return UISearchController(searchResultsController: searchSongViewController)
+//    }
     
     // *********** EXAMPLE DATA *************** //
     private var songs = [Song(songId: "id1", upvotes: 0, downvotes: 0),
@@ -63,8 +63,7 @@ class SongsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
 
         tableView.dataSource = self
-        tableView.tableHeaderView = searchController.searchBar
-        searchController.searchResultsUpdater = searchSongViewController
+        
     }
     
     override func didReceiveMemoryWarning() {

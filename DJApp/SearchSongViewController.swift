@@ -11,15 +11,21 @@ import UIKit
 class SearchSongViewController: UITableViewController {
     
     let maxNumSearchResults = 10
+    let searchController = UISearchController(searchResultsController: nil)
+    // url: GET https://www.googleapis.com/youtube/v3/search
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(SearchSongViewController.dismissSearchSongViewController))
+        tableView.tableHeaderView = searchController.searchBar
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func dismissSearchSongViewController() {
+        self.dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +47,8 @@ class SearchSongViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchResultCell", for: indexPath) as! SearchSongCell
         // youtube api configure cell
+        // if search not empty...
+        // something like: cell.text = videos[indexPath.row].title
 
         return cell
     }

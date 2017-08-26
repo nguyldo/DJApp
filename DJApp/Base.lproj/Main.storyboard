@@ -9,6 +9,50 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Entry View Controller-->
+        <scene sceneID="L7a-hI-foP">
+            <objects>
+                <viewController id="xiO-Zn-zmr" customClass="EntryViewController" customModule="DJApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X2R-Yw-4fu"/>
+                        <viewControllerLayoutGuide type="bottom" id="MqY-3Y-iSW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Gy-4s-sbX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgY-HA-KFe">
+                                <rect key="frame" x="136" y="318.5" width="102" height="30"/>
+                                <state key="normal" title="Create a Room"/>
+                                <connections>
+                                    <action selector="didCreateRoom:" destination="xiO-Zn-zmr" eventType="touchUpInside" id="fPj-e8-9wB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcY-rJ-wmN">
+                                <rect key="frame" x="145" y="356" width="84" height="30"/>
+                                <state key="normal" title="Join a Room"/>
+                                <connections>
+                                    <action selector="didJoinRoom:" destination="xiO-Zn-zmr" eventType="touchUpInside" id="osZ-LE-ymK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HgY-HA-KFe" firstAttribute="centerX" secondItem="8Gy-4s-sbX" secondAttribute="centerX" id="UlG-hH-DSZ"/>
+                            <constraint firstItem="HgY-HA-KFe" firstAttribute="centerY" secondItem="8Gy-4s-sbX" secondAttribute="centerY" id="cnY-Vh-EEG"/>
+                            <constraint firstItem="jcY-rJ-wmN" firstAttribute="top" secondItem="HgY-HA-KFe" secondAttribute="bottom" constant="8" id="fxb-Tr-9fc"/>
+                            <constraint firstItem="jcY-rJ-wmN" firstAttribute="centerX" secondItem="8Gy-4s-sbX" secondAttribute="centerX" id="uMS-eL-bEB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GpY-V8-d98"/>
+                    <connections>
+                        <outlet property="didCreateRoom" destination="HgY-HA-KFe" id="o44-lO-MEh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YWM-wD-LWH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="-1304.7976011994003"/>
+        </scene>
         <!--Songs View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -88,7 +132,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="keJ-OH-day">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bhL-DE-bWP"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bhL-DE-bWP">
+                            <connections>
+                                <segue destination="c19-85-Xq3" kind="show" id="RV0-Or-D2P"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="QJU-wY-A0t" id="v8q-bc-2xc"/>
@@ -125,7 +173,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rw0-BD-jJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="929" y="27"/>
+            <point key="canvasLocation" x="1756" y="-628"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zu7-Fl-5AL">
@@ -161,10 +209,31 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78V-lm-x3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="84" y="28"/>
+            <point key="canvasLocation" x="967" y="62"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oJB-Zu-wiw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fyw-BU-Zdl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="16V-w0-OWu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xiO-Zn-zmr" kind="relationship" relationship="rootViewController" id="1tV-LK-yMG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ox2-jk-i3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121" y="-1304"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="5120" height="3200"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6Z4-Tk-8rl"/>
+    </inferredMetricsTieBreakers>
 </document>
