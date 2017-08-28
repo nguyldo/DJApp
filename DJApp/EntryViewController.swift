@@ -12,11 +12,13 @@ import Firebase
 class EntryViewController: UIViewController {
     
     var ref: DatabaseReference!
+    private var keyGenerator: KeyGenerator!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         FirebaseApp.configure()
         ref = Database.database().reference()
+        keyGenerator = KeyGenerator()
         // Do any additional setup after loading the view.
     }
 
@@ -34,12 +36,35 @@ class EntryViewController: UIViewController {
     
     @IBAction func didCreateRoom(_ sender: Any) {
         // generate key
-        let key = "A1B2C3"
-        Auth.auth().signInAnonymously { (user, error) in
+        var key = keyGenerator.getKey()
+        
+        ref.child("registeredID").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
             
+            var flag = true
+            
+            while flag {
+            
+                if let _ = value?[key] {
+                    key = self.keyGenerator.generateNewKey()
+                    flag = true
+                } else {
+                    flag = false
+                }
+            
+            }
+            
+            Auth.auth().signInAnonymously(completion: { (user, error) in
+                if let u = user {
+                    self.ref.child("registeredID/" + u.uid).setValue(key)
+                }
+            })
+            
+        }) { (error) in
+            print(error.localizedDescription)
         }
-    }
 
+    }
 
     /*
     // MARK: - Navigation

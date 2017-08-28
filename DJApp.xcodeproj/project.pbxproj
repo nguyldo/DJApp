@@ -19,6 +19,8 @@
 		CB749C7D1F36564300EFC01A /* SongYoutubeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB749C7C1F36564300EFC01A /* SongYoutubeData.swift */; };
 		CB904C9A1F2284A70071A36B /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB904C991F2284A60071A36B /* SongTableViewCell.swift */; };
 		CB904C9D1F22875A0071A36B /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB904C9C1F22875A0071A36B /* Song.swift */; };
+		CBAB9CCA1F522CAE00199863 /* KeyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAB9CC91F522CAE00199863 /* KeyGenerator.swift */; };
+		CBAB9CCC1F523AAD00199863 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAB9CCB1F523AAD00199863 /* SignInViewController.swift */; };
 		CBD262481F1A7C0B005B9231 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBD262471F1A7C0B005B9231 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		CB749C7C1F36564300EFC01A /* SongYoutubeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongYoutubeData.swift; sourceTree = "<group>"; };
 		CB904C991F2284A60071A36B /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		CB904C9C1F22875A0071A36B /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		CBAB9CC91F522CAE00199863 /* KeyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyGenerator.swift; sourceTree = "<group>"; };
+		CBAB9CCB1F523AAD00199863 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CBCF12C76B653D4C27088A2E /* Pods_DJApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DJApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD262471F1A7C0B005B9231 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +126,7 @@
 				CB740B6C1F1FCBA3007DD5F8 /* SongsViewController.swift */,
 				600015701F3C3622005CCFA1 /* SearchSongViewController.swift */,
 				6003C6A11F40D86800FFB5AA /* EntryViewController.swift */,
+				CBAB9CCB1F523AAD00199863 /* SignInViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			children = (
 				CB904C9C1F22875A0071A36B /* Song.swift */,
 				CB749C7C1F36564300EFC01A /* SongYoutubeData.swift */,
+				CBAB9CC91F522CAE00199863 /* KeyGenerator.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -259,7 +265,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -269,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBAB9CCA1F522CAE00199863 /* KeyGenerator.swift in Sources */,
 				CB904C9D1F22875A0071A36B /* Song.swift in Sources */,
 				606804001F3C4014001A0B57 /* SearchSongCell.swift in Sources */,
 				CB904C9A1F2284A70071A36B /* SongTableViewCell.swift in Sources */,
@@ -276,6 +283,7 @@
 				CB740B6D1F1FCBA3007DD5F8 /* SongsViewController.swift in Sources */,
 				6003C6A21F40D86800FFB5AA /* EntryViewController.swift in Sources */,
 				600015711F3C3622005CCFA1 /* SearchSongViewController.swift in Sources */,
+				CBAB9CCC1F523AAD00199863 /* SignInViewController.swift in Sources */,
 				CB749C7D1F36564300EFC01A /* SongYoutubeData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
